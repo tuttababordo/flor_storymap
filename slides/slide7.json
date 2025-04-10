@@ -1,0 +1,11 @@
+{
+    "text": {
+        "headline": "Del Regno de Perssia",
+        "text": "<p><span>El Regno de Perssia es departido en dos partes et es &lt;contado&gt;<span class='manicula' data-popup='1'>☜</span> por un regno solo, car vn Senyor todo solo ha tenido toda ora la Senyoria. La primera partida del Regno de Perssia se stiende por oc\u00e7ident entro al rio que es clamado Phison qu&lt;e&gt; es<span class='manicula' data-popup='2'>☜</span> vno de los .iiii. rios que yxen de Parayso terenal, et deues septentrion se stiende entro la Mar Caspis; deues mig iour se stiende entro ha la Mar India. Aquella tierra es quasi toda plana et ay dos grandes et ricas ciudades: la vna es clamada Bocata, et la otra Samorgat. La gent de aquella tiera son dichos Perssanos et han lenguages proprio que ellos faulan; de mercaderias et de lauores de tierra viuen, de armas nin de guerras non se entremeten. Aquestos antiguament adoravan las ydolas, et sennaladament avien el fuego por lur Dios, mas pues que aquella maluada lengua vino en aquellas partidas ellos fueron todos Moros et crehen todos en la falssa ley de Mahomet. La otra partida de Perssia comien\u00e7a del rio de Phison et estiendese por oc\u00e7ident entro ha el Regno de Media et a la partida de Arminia la grant, deues mig iour comarca con vna prouin\u00e7ia del Reyno de India et con vna partida de la Mar Oc\u00e7iana et en partida con la tierra de Media. En aquell Regno de Perssia ha dos grandes ciudades: la vna ha nombre Vesabor, la otra Spaen. Et la gent de aquella encontrada en maneras et en costumbres son semblantes a la otras desuso dichas.</span></p>"
+    },
+
+    "popups": {
+        "1":"<div><p>Even though here Escorial ZI2 reads <em>cercado</em>, we can accept Long's correction with <em>contado</em> (Long 1934, p. 59).</p></div>",
+        "2":"><div><p>Escorial ZI2 reads <em>ques</em>.</p></div></div>"
+    }
+}

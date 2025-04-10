@@ -1,0 +1,338 @@
+{
+    "storymap": {
+        "attribution": "",
+        "call_to_action": true,
+        "call_to_action_text": "",
+        "map_as_image": true,
+        "map_background_color": "#000000",
+        "map_subdomains": "",
+        "map_type": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
+        "slides": [
+            {
+                "date": "",
+                "location": {
+                    "line": true
+                },
+                "media": {
+                    "caption": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=6\" style=\"color: #3399ff;\" target=\"_blank\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2</a>",
+                    "credit": "",
+                    "url": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Escorial_F_1.jpg"
+                },
+
+                "dataUrl":"slides/slide0.json",
+
+                "type": "overview"
+            },
+            {
+                "background": {},
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 39.562294459158174,
+                    "line": true,
+                    "lon": 116.00008964538574,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-851%2C0%2C2600%2C1348&cv=18\" style=\"color: #3399ff;\" target=\"_blank\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 1r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0001R.jpg/full/899,/0/default.jpg"
+                },
+
+                "dataUrl":"slides/slide1.json"  
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 41,
+                    "line": true,
+                    "lon": 85,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=19\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 1v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0001V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide2.json" 
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 41.51,
+                    "line": true,
+                    "lon": 68.18,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=20\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 2r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0002R.jpg/full/899,/0/default.jpg"
+                },
+               
+                "dataUrl":"slides/slide3.json" 
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 42.11,
+                    "line": true,
+                    "lon": 59.19,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=21\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 2v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0002V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide4.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 47.3,
+                    "line": true,
+                    "lon": 51.44,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=21\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 2v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0002V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide5.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 21,
+                    "line": true,
+                    "lon": 78,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=23\"  target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 3v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0003V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide6.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 32.39,
+                    "line": true,
+                    "lon": 51.4,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=24\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 4r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0004R.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide7.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 34.51,
+                    "line": true,
+                    "lon": 48.31,
+                    "use_custom_marker": true,
+                    "zoom": 6
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=25\"  target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 4v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0004V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide8.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 38.04,
+                    "line": true,
+                    "lon": 46.18,
+                    "use_custom_marker": true,
+                    "zoom": 7
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=26\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 5r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0005R.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide9.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 42,
+                    "line": true,
+                    "lon": 43.3,
+                    "use_custom_marker": true,
+                    "zoom": 7
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=27\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 5v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0005V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide10.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 36.21,
+                    "line": true,
+                    "lon": 43.09,
+                    "use_custom_marker": true,
+                    "zoom": 7
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=28\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 6r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0006R.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide11.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 36.22,
+                    "line": true,
+                    "lon": 41.43,
+                    "use_custom_marker": true,
+                    "zoom": 7
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=29\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 6v</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0006V.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide12.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 37.52,
+                    "line": true,
+                    "lon": 32.29,
+                    "use_custom_marker": true,
+                    "zoom": 7
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=30\" target=\"_blank\" style=\"color: #3399ff;\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 7r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0007R.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide13.json"
+            },
+            {
+                "date": "",
+                "location": {
+                    "icon": "//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png",
+                    "iconSize": [
+                        30.027397260273972,
+                        48
+                    ],
+                    "lat": 33.3,
+                    "line": true,
+                    "lon": 36.18,
+                    "use_custom_marker": true,
+                    "zoom": 7
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "<a href=\"https://rbme.patrimonionacional.es/s/rbme/item/13259#?xywh=-1095%2C-1%2C3088%2C1348&cv=32\" style=\"color: #3399ff;\" target=\"_blank\">Real Biblioteca del Monasterio de San Lorenzo de El Escorial, Z-I-2, 8r</a>",
+                    "url": "https://imagenes.patrimonionacional.es/iiif/2/Z-I-2%2FFOL-0008R.jpg/full/899,/0/default.jpg"
+                },
+                
+                "dataUrl":"slides/slide14.json"
+            }
+        ],
+        "zoomify": false
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "text": {
+        "headline": "Del Regno de Caldea",
+        "text": "<p><span>El Regno de los Caldeos deues orient comien\u00e7a de las montanyas de Media et stiendese entro a &lt;una&gt;<span class='manicula' data-popup='1'>☜</span> antigua \u00e7iudat cerca del rio de Tigris. Aquesti Niniue es aquella ciudat de la qual la Santa Scriptura parla et a la qual fue enviado Ionas Profeta a predicar por mandamiento de Dios. Aquesta ciudat es agora toda destruyda et sembla bien que fue vna de las mayores ciudades del mundo.<br>La amplaria del Regno de Caldea deues septemtrion comarca con una ciudat que es clamada Maritiga et estiendese por medio dientro a la Mar Oc\u00e7eana. La mayor ciudat que sea en el Regno de Caldea es Baldach, la qual en tiempo passado fue c&lt;l&gt;amada<span class='manicula' data-popup='2'>☜</span> Babilonia, et en aquel&lt;la&gt;<span class='manicula' data-popup='3'>☜</span> tierra enlevo Nabugodenosor en captiuitat los Fillos de Israhel quando priso Gerusalem. Et el Regno de Caldea ha grandes planos et pocas montanyas et ay pocas aguas corrientes. Las gentes qui habitan en Caldea son clamadas Nestorins et ha&lt;n&gt;<span class='manicula' data-popup='4'>☜</span> letras caldeas et la falssa ley de Mahomet<span class='manicula' data-popup='5'>☜</span>.</span></p>"
+    }, 
+
+    "popups": {
+        "1": "<div><p>Escroail ZI2 displays a corrupt passage: \"El Regno de los Caldeos deves orient comien\u00e7a de las montanyas de Media et stiendese entro a <strong>Erminie la Grant</strong> et antigua \u00e7iudat cerca del rio de Tigris\". The addition of \"Erminie la Grant\" makes the text difficult to read and this is the reason why we propose the correction based on the branch alpha of Old French text: \"Le Regne de Caldee deuers orient commence des montaignes de Mede et s'estent iusques a une grant et anciene cite qui est pres du flum de Tygris. Ceste cite est apellee Niniue [...]\", (\u00d6NB 2623, f. 11r). Long (p. 64) proposes a different solution: \"El Regno de los Caldeos deves orient comien\u00e7a de las montanyas de Media et stiende se entro a <strong>Niniue,</strong> la grant et antigua \u00e7iudat cerca del rio de Tigris\".</p></div>",
+        "2": "<div><p> Escorial ZI2 reads \"camada\".</p></div>",
+        "3": "><div><p>Escorial ZI2 reads \"aquel\" with no abbreviation sign.</p></div>",
+        "4": "<div><p>Escorial ZI2 reads \"ha\"</p></div>",
+        "5": "<div><p><a target=\"\" rel=\"\">[5]</a> Here the scriber skipped a line. This can be inferred not only through the comparison with the Old French text of branch alpha, but also because the manuscript presents something unusual in the mise en page, as instead of the usual 32 lines, the left column of f. has only 31 lines. The Old French text branch alpha reads: \"Et ont lettres caldees et lettres arabiques Et tienent la fausse loy de Mahomet\", (\u00d6NB 2623, f. 11r). Long (p. 65) corrects the text following branch alpha.</p></div>"
+
+    }
+}

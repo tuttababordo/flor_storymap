@@ -1,0 +1,11 @@
+{
+    "text": {
+        "headline": "Del Regno de Turquesten",
+        "text": "<p><span>El Regno de Turquesten afruenta deues orient con el Regno de Tarssia, deues oc\u00e7ident con el Regno de Perssia, deues septrentrion con el Regno de Corasine, deues mig iour se estende entro ha vna cabe\u00e7a de vn desierto de India. En aquell regno ha pocas buenas ciudades mas hay grandes planuras et hay buenas pasturas. Aquella gent quasi son todos pastures et habitan en tiendas et en tales cosas que liugerament las porten de un lugar en otro. La mayor \u00e7iudat de aquesti regno ha nombre Octerar. En aquella tierra non se faze forment ni ordio, sino poco; miio et aroz manian. Uino non han pont, mas beuen ceruesa et otros beurages. Et aquella gent de aquella tierra son clamados Turic. Quasi todos son instruydos en los falsos enssenyamentes de la ley de Mahomet et algunos ay que ni<span class='manicula' data-popup='1'>☜</span> tienen ni ley ni fe. Aquestos non &lt;han&gt;<span class='manicula' data-popup='2'>☜</span> letras de si mismos, antes husan de las letras arabigas por las ciudades et por los castiellos.</span></p>"
+    },
+
+    "popups": {
+        "1": "<div><p>Should we correct with no?</p></div>",
+        "2": "Cfr. next passage, highlighted in same colour. While I would correct with non han, the presence of at least two non could perhaps suggest a dependence from the French form n'ont? Though this is probably a far-fetched assumption considering the presence of a Catalan intermediary according to critics. Also consider above the presence of a 'non han pont' highlighted in blu in Regno de Tarssia."
+    }
+}

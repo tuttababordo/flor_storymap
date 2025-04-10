@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>StoryMapJS: Hethoum of Korykos - Flor ystorias d&#39;Orient - Old Aragonese Version</title>
+<meta charset="utf-8">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@knightlab" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Hethoum of Korykos - Flor ystorias d&#39;Orient - Old Aragonese Version" />
+<meta property="og:description" content="">
+<meta property="og:url" content="https://uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/draft.html" />
+<meta property="og:image" content="https://uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/_images/Hethoum.png" />
+<meta property="og:site_name" content="StoryMapJS" />
+<meta name="description" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="//cdn.knightlab.com/libs/blueline/latest/assets/logos/favicon.ico">
+<link rel="stylesheet" href="//cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
+<link rel="alternate" type="application/json+oembed" href="https://oembed.knightlab.com/storymap/?url=https%3A//uploads.knightlab.com/storymapjs/6ad92088971d2a837f404c9d982802bf/flor-de-la-ystorias-d-orient/draft.html">
+<script type="text/javascript" src="//cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
+<style>
+
+/* Keep existing styles for html, body, #storymap-embed */
+/* Target text paragraphs within regular slides */
+.vco-slide .vco-text p {
+    color: #000000; /* Black */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#storymap-embed {
+    /*border: 1px solid #999;*/
+}
+
+/* 👇 --- MODIFIED CSS BELOW --- 👇 */
+
+#popup-overlay {
+  position: fixed; /* Keep fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+  /* REMOVE display: flex, justify-content, align-items */
+  z-index: 9999;
+  /* Ensure it's hidden initially via JS or inline style */
+  /* display: none;  <-- control this with JS */
+}
+
+/* ... (keep other styles like html, body, #popup-overlay, etc.) ... */
+
+#popup-box {
+  background: #fff9f0;
+  padding: 20px; /* Padding remains on the main box */
+  border-radius: 8px;
+  max-width: 600px;
+  /* REMOVE max-height and overflow-y from here */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-family: "EB Garamond", serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: move;
+  /* overflow: visible; is the default, so explicitly setting it is optional */
+}
+
+/* 👇 NEW/MODIFIED: Styles for the scroll wrapper 👇 */
+.popup-scroll-wrapper {
+  max-height: 75vh; /* Apply max-height here (adjust value as needed) */
+  overflow-y: auto;  /* Apply overflow scrolling here */
+  /* Optional: Add padding inside the scroll area if needed */
+  /* padding: 5px; */
+  /* Optional: Prevent padding from affecting width calculations */
+  box-sizing: border-box;
+}
+
+
+#popup-close {
+  position: absolute;
+  top: -12px;      /* Adjust position slightly for smaller size */
+  right: -12px;     /* Adjust position slightly for smaller size */
+  width: 24px;      /* Smaller width */
+  height: 24px;     /* Smaller height */
+  line-height: 24px; /* Match height for vertical centering */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #fff; /* White background (or #fff9f0 to match box) */
+  border: 1px solid #ccc; /* Subtle grey border */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center; /* Center the 'x' horizontally */
+  font-size: 1.1em;  /* Adjust 'x' size to fit smaller circle */
+  color: #555;      /* Dark grey color for 'x' */
+  cursor: pointer;
+  z-index: 10;       /* Keep it on top */
+}
+
+/* ... (keep styles for .manicula, #popup-box.dragging) ... */
+
+.manicula {
+  cursor: pointer;
+  display: inline;
+  font-size: 1.2em;
+  color: #c30;
+  margin-left: 4px;
+}
+
+/* Optional: Style while dragging */
+#popup-box.dragging {
+  cursor: grabbing;
+  user-select: none; /* Prevent text selection during drag */
+
+}
+</style>
+<!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="storymap-embed"></div>
+
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('js', new Date());
+    gtag('config', 'G-M95DDQGLWH');
+    gtag('event', 'EmbeddedIn', {
+      'event_label': document.referrer,
+      'event_category': 'StoryMapJS',
+      'non_interaction': true
+    })
+  </script>
+
+<script type="text/javascript">
+    var storymap;
+    let storymap_data = null;
+    var storymap_url = 'draft.json';
+    const urlParams = new URLSearchParams(window.location.search);
+
+	function onStoryMapTitle(e) {
+      document.title = "StoryMapJS: " + e.title;
+	};
+
+    function getScriptPath(scriptname) {
+        var scriptTags = document.getElementsByTagName('script');
+        for(var i = 0; i < scriptTags.length; i++) {
+            if(scriptTags[i].src.match(scriptname)) {
+                script_path = scriptTags[i].src;
+                return script_path.split('?')[0].split('/').slice(0, -1).join('/');
+            }
+        }
+        return '';
+    }
+
+    function getStartSlide() {
+        var slide = 0;
+        if (urlParams.has('start_at_slide')) {
+            slide = parseInt(urlParams.get('start_at_slide'), 10);
+        }
+        return slide;
+    }
+
+    function urlJoin(url, concat) {
+        function build(parts,container) {
+            for (var i = 0, l = parts.length; i < l; i ++) {
+                if (parts[i] == '..') {
+                    container.pop();
+                } else if (parts[i] == '.') {
+                    continue;
+                } else {
+                    container.push(parts[i]);
+                }
+            }
+        }
+        var url_parts = [ ];
+        build(url.split('/'),url_parts);
+        build(concat.split('/'),url_parts);
+        return url_parts.join('/');
+    }
+
+    function buildStoryMap(data) {
+        if (!data || !data.storymap) { return; }
+        storymap_data = data;
+        var options = {
+            script_path: getScriptPath(/storymap(-min)?\.js/),
+            start_at_slide: getStartSlide()
+        };
+        var font = "stock:default";
+        if(data.font_css) {
+            font = data.font_css;
+        }
+        if(font.indexOf("stock:") == 0) {
+            var font_name = font.split(':')[1];
+            var base_url = urlJoin(options.script_path,"../css/fonts");
+            font = urlJoin(base_url, "font." + font_name + ".css");
+        } else if(!font.match('^(http|https|//)')) {
+            font = urlJoin(options.script_path, font);
+        }
+        KLStoryMap.loadCSS(font,function(){ console.log('font loaded: ' + font);});
+	    storymap = new KLStoryMap.StoryMap('storymap-embed', data, options, {
+            title: onStoryMapTitle
+        });
+        var mapType = storymap.options.map_type;
+        if(mapType && mapType.match('^zoomify.*')) {
+            ga('send', 'event', 'StoryMapJS', 'zoomify', document.referrer)
+        }
+    }
+
+    const loadSlideData = async (slide, index) => {
+  if (slide.dataUrl) {
+    //console.log(⏳ Loading external slide ${index} from ${slide.dataUrl});
+    try {
+      const res = await fetch(slide.dataUrl);
+      const data = await res.json();
+
+      //console.log(✅ Loaded data for slide ${index}:, data);
+
+      if (data.text) storymap_data.storymap.slides[index].text = data.text;
+      if (data.media) storymap_data.storymap.slides[index].media = data.media;
+      if (data.location) storymap_data.storymap.slides[index].location = data.location;
+
+      if (data.popups) storymap_data.storymap.slides[index].popups = data.popups;
+
+    } catch (err) {
+     // console.error(❌ Error loading slide ${index} from ${slide.dataUrl}, err);
+    }
+  }
+};
+
+    const loadSlides = async () => {
+        const slides = storymap_data.storymap.slides;
+        await Promise.all(slides.map(loadSlideData));
+        //window.storymap = new VCO.StoryMap("storymap", storymap_data);
+    };
+
+    (function() {
+        fetch(storymap_url)
+            .then(response => response.json())
+            .then(async data => {
+                storymap_data = data;  // hold onto it
+                await loadSlides();    // wait for all dataUrls to resolve
+                buildStoryMap(storymap_data);  // now it's ready
+            });
+    })();
+
+    window.onresize = function(event) {
+        if(storymap) {
+            storymap.updateDisplay();
+        }
+    };
+
+    // 👇 Add this new popup logic below 👇
+    document.addEventListener("DOMContentLoaded", () => {
+    const popupOverlay = document.getElementById("popup-overlay");
+    const popupBox = document.getElementById("popup-box"); // Get the box itself
+    const popupContent = document.getElementById("popup-content");
+    const popupClose = document.getElementById("popup-close");
+
+    // --- Existing Popup Show/Hide Logic ---
+    popupClose.onclick = () => {
+        popupOverlay.style.display = "none";
+        popupContent.innerHTML = "";
+        // Reset position when closing (optional)
+        popupBox.style.top = '50%';
+        popupBox.style.left = '50%';
+        popupBox.style.transform = 'translate(-50%, -50%)';
+    };
+
+    document.body.addEventListener("click", function(e) {
+    if (e.target.classList.contains("manicula")) {
+        e.preventDefault();
+        const triggerElement = e.target;
+        const popupId = triggerElement.getAttribute("data-popup"); // Get the identifier
+
+        // --- ADD TEMPORARY LOGS ---
+        console.log("--- Debugging Popup ---");
+        console.log("Clicked element:", triggerElement);
+        console.log("Popup ID requested:", popupId);
+        // --- END TEMP LOGS ---
+
+        let content = "Popup content not found."; // Default message
+
+        if (storymap && typeof storymap.current_slide !== 'undefined' && storymap_data) {
+            try {
+                const currentSlideIndex = storymap.current_slide;
+                // --- ADD TEMPORARY LOGS ---
+                console.log("Current Slide Index:", currentSlideIndex);
+                // --- END TEMP LOGS ---
+
+                const currentSlideData = storymap_data.storymap.slides[currentSlideIndex];
+                // --- ADD TEMPORARY LOGS ---
+                console.log("Current Slide Data Object:", currentSlideData); // Log the entire object to inspect it
+                // --- END TEMP LOGS ---
+
+
+                if (currentSlideData && currentSlideData.popups && currentSlideData.popups[popupId]) {
+                     // --- ADD TEMPORARY LOGS ---
+                     console.log("Found popups object:", currentSlideData.popups);
+                     console.log("Attempting to access key:", popupId);
+                     // --- END TEMP LOGS ---
+                    content = currentSlideData.popups[popupId];
+                } else {
+                    console.warn(`Lookup Failed: Popup content key "${popupId}" not found in slide ${currentSlideIndex} popups data.`);
+                    // Log the reasons why it might have failed
+                    console.log("Does currentSlideData exist?", !!currentSlideData);
+                    console.log("Does currentSlideData.popups exist?", !!(currentSlideData && currentSlideData.popups));
+                    if (currentSlideData && currentSlideData.popups) {
+                       console.log("Keys available in popups:", Object.keys(currentSlideData.popups));
+                       console.log(`Is key "${popupId}" present?`, currentSlideData.popups.hasOwnProperty(popupId));
+                    }
+                }
+            } catch (error) {
+                console.error("Error retrieving popup content from slide data:", error);
+                content = "Error loading content.";
+            }
+        } else {
+            console.error("StoryMap object or data not ready for popup retrieval.");
+            content = "Error: StoryMap not ready.";
+             // Log details for debugging why it's not ready
+             console.log("storymap:", storymap);
+             console.log("storymap.current_slide:", storymap ? storymap.current_slide : 'N/A');
+             console.log("storymap_data:", storymap_data);
+        }
+        // --- END OF NEW LOGIC ---
+
+        // *** ENSURE THIS LINE IS PRESENT ***
+        // Set the inner HTML of the popup content area
+        popupContent.innerHTML = content;
+
+        // Reset position and display the popup
+        popupBox.style.top = '50%';
+        popupBox.style.left = '50%';
+        popupBox.style.transform = 'translate(-50%, -50%)';
+        popupOverlay.style.display = "block"; // Use block instead of flex
+    }
+});
+
+    // --- NEW Draggable Logic ---
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    // Function to start dragging
+    const startDrag = (e) => {
+        // Prevent dragging if clicking on the close button or interactive elements inside
+        if (e.target === popupClose || popupContent.contains(e.target)) {
+             // Allow interaction with content, don't start drag if clicking inside content area
+             // Or specifically check if the click is on a link, button, etc. inside popupContent
+            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') {
+               return;
+            }
+             // If you want content clicks to *not* drag, return here.
+             // If you want content clicks *to* drag (unless it's interactive), remove this check.
+             // return; // Uncomment this line to prevent dragging when clicking content area
+        }
+
+
+        isDragging = true;
+        popupBox.classList.add('dragging'); // Optional: visual feedback
+
+        // Calculate offset from the element's top-left corner
+        // Need to account for potential CSS transforms
+        const rect = popupBox.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+
+
+        // Remove transform for direct top/left positioning during drag
+        popupBox.style.transform = 'none';
+        // Set initial top/left based on current position
+        popupBox.style.left = `${rect.left}px`;
+        popupBox.style.top = `${rect.top}px`;
+
+
+        // Add listeners to the whole document for move and up events
+        document.addEventListener('mousemove', dragMove);
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('mouseleave', stopDrag); // Stop if mouse leaves window
+
+        e.preventDefault(); // Prevent default drag behavior (like text selection)
+    };
+
+    // Function to handle dragging movement
+    const dragMove = (e) => {
+        if (!isDragging) return;
+
+        // Calculate new position
+        let newX = e.clientX - offsetX;
+        let newY = e.clientY - offsetY;
+
+        // Optional: Boundary checks (prevent dragging off-screen)
+        const overlayRect = popupOverlay.getBoundingClientRect(); // or document.documentElement.clientWidth/Height
+        const boxRect = popupBox.getBoundingClientRect();
+
+        newX = Math.max(0, Math.min(newX, overlayRect.width - boxRect.width));
+        newY = Math.max(0, Math.min(newY, overlayRect.height - boxRect.height));
+
+
+        popupBox.style.left = `${newX}px`;
+        popupBox.style.top = `${newY}px`;
+    };
+
+    // Function to stop dragging
+    const stopDrag = () => {
+        if (isDragging) {
+            isDragging = false;
+            popupBox.classList.remove('dragging'); // Optional: remove visual feedback
+            // Remove document-level listeners
+            document.removeEventListener('mousemove', dragMove);
+            document.removeEventListener('mouseup', stopDrag);
+            document.removeEventListener('mouseleave', stopDrag);
+        }
+    };
+
+    // Attach the mousedown listener to the popup box
+    popupBox.addEventListener('mousedown', startDrag);
+
+}); // End of DOMContentLoaded
+</script>
+
+<!-- Popup container -->
+<div id="popup-overlay" style="display:none;">
+    <div id="popup-box">
+      <span id="popup-close">&times;</span>
+
+      <div class="popup-scroll-wrapper">
+          <div id="popup-content">
+              </div>
+      </div>
+      </div>
+</div>
+
+</body>
+</html> 

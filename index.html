@@ -21,8 +21,7 @@
 <script type="text/javascript" src="//cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
 <style>
 
-/* Keep existing styles for html, body, #storymap-embed */
-/* Target text paragraphs within regular slides */
+
 .vco-slide .vco-text p {
     color: #000000; /* Black */
 }
@@ -37,7 +36,6 @@ html, body {
     /*border: 1px solid #999;*/
 }
 
-/* 👇 --- MODIFIED CSS BELOW --- 👇 */
 
 #popup-overlay {
   position: fixed; /* Keep fixed */
@@ -46,20 +44,18 @@ html, body {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.1);
-  /* REMOVE display: flex, justify-content, align-items */
+
   z-index: 9999;
-  /* Ensure it's hidden initially via JS or inline style */
-  /* display: none;  <-- control this with JS */
+ 
 }
 
-/* ... (keep other styles like html, body, #popup-overlay, etc.) ... */
+
 
 #popup-box {
   background: #fff9f0;
   padding: 20px; /* Padding remains on the main box */
   border-radius: 8px;
   max-width: 600px;
-  /* REMOVE max-height and overflow-y from here */
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   font-family: "EB Garamond", serif;
   position: absolute;
@@ -67,39 +63,33 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: move;
-  /* overflow: visible; is the default, so explicitly setting it is optional */
 }
 
-/* 👇 NEW/MODIFIED: Styles for the scroll wrapper 👇 */
 .popup-scroll-wrapper {
-  max-height: 75vh; /* Apply max-height here (adjust value as needed) */
-  overflow-y: auto;  /* Apply overflow scrolling here */
-  /* Optional: Add padding inside the scroll area if needed */
-  /* padding: 5px; */
-  /* Optional: Prevent padding from affecting width calculations */
+  max-height: 75vh; 
+  overflow-y: auto;  
   box-sizing: border-box;
 }
 
 
 #popup-close {
   position: absolute;
-  top: -12px;      /* Adjust position slightly for smaller size */
-  right: -12px;     /* Adjust position slightly for smaller size */
-  width: 24px;      /* Smaller width */
-  height: 24px;     /* Smaller height */
-  line-height: 24px; /* Match height for vertical centering */
-  border-radius: 50%; /* Make it a circle */
-  background-color: #fff; /* White background (or #fff9f0 to match box) */
-  border: 1px solid #ccc; /* Subtle grey border */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  text-align: center; /* Center the 'x' horizontally */
-  font-size: 1.1em;  /* Adjust 'x' size to fit smaller circle */
-  color: #555;      /* Dark grey color for 'x' */
+  top: -12px;     
+  right: -12px;     
+  width: 24px;      
+  height: 24px;     
+  line-height: 24px; 
+  border-radius: 50%; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
+  text-align: center; 
+  font-size: 1.1em;  
+  color: #555;      
   cursor: pointer;
-  z-index: 10;       /* Keep it on top */
+  z-index: 10;     
 }
 
-/* ... (keep styles for .manicula, #popup-box.dragging) ... */
 
 .manicula {
   cursor: pointer;
@@ -109,20 +99,17 @@ html, body {
   margin-left: 4px;
 }
 
-/* Optional: Style while dragging */
 #popup-box.dragging {
   cursor: grabbing;
-  user-select: none; /* Prevent text selection during drag */
+  user-select: none; 
 
 }
 </style>
-<!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
-<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 </head>
 <body>
 <div id="storymap-embed"></div>
 
-<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -244,9 +231,9 @@ html, body {
         fetch(storymap_url)
             .then(response => response.json())
             .then(async data => {
-                storymap_data = data;  // hold onto it
-                await loadSlides();    // wait for all dataUrls to resolve
-                buildStoryMap(storymap_data);  // now it's ready
+                storymap_data = data;  
+                await loadSlides();    
+                buildStoryMap(storymap_data);  
             });
     })();
 
@@ -256,18 +243,16 @@ html, body {
         }
     };
 
-    // 👇 Add this new popup logic below 👇
+   
     document.addEventListener("DOMContentLoaded", () => {
     const popupOverlay = document.getElementById("popup-overlay");
-    const popupBox = document.getElementById("popup-box"); // Get the box itself
+    const popupBox = document.getElementById("popup-box"); 
     const popupContent = document.getElementById("popup-content");
     const popupClose = document.getElementById("popup-close");
 
-    // --- Existing Popup Show/Hide Logic ---
     popupClose.onclick = () => {
         popupOverlay.style.display = "none";
         popupContent.innerHTML = "";
-        // Reset position when closing (optional)
         popupBox.style.top = '50%';
         popupBox.style.left = '50%';
         popupBox.style.transform = 'translate(-50%, -50%)';
@@ -277,8 +262,7 @@ html, body {
     if (e.target.classList.contains("manicula")) {
         e.preventDefault();
         const triggerElement = e.target;
-        const popupId = triggerElement.getAttribute("data-popup"); // Get the identifier
-
+        const popupId = triggerElement.getAttribute("data-popup"); 
         // --- ADD TEMPORARY LOGS ---
         console.log("--- Debugging Popup ---");
         console.log("Clicked element:", triggerElement);
@@ -328,65 +312,46 @@ html, body {
              console.log("storymap.current_slide:", storymap ? storymap.current_slide : 'N/A');
              console.log("storymap_data:", storymap_data);
         }
-        // --- END OF NEW LOGIC ---
 
-        // *** ENSURE THIS LINE IS PRESENT ***
-        // Set the inner HTML of the popup content area
         popupContent.innerHTML = content;
 
-        // Reset position and display the popup
         popupBox.style.top = '50%';
         popupBox.style.left = '50%';
         popupBox.style.transform = 'translate(-50%, -50%)';
-        popupOverlay.style.display = "block"; // Use block instead of flex
+        popupOverlay.style.display = "block"; 
     }
 });
 
-    // --- NEW Draggable Logic ---
     let isDragging = false;
     let offsetX, offsetY;
 
-    // Function to start dragging
     const startDrag = (e) => {
-        // Prevent dragging if clicking on the close button or interactive elements inside
-        if (e.target === popupClose || popupContent.contains(e.target)) {
-             // Allow interaction with content, don't start drag if clicking inside content area
-             // Or specifically check if the click is on a link, button, etc. inside popupContent
-            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') {
-               return;
-            }
-             // If you want content clicks to *not* drag, return here.
-             // If you want content clicks *to* drag (unless it's interactive), remove this check.
-             // return; // Uncomment this line to prevent dragging when clicking content area
-        }
+    if (
+        e.target === popupClose ||
+        popupContent.contains(e.target) &&
+        ['A', 'BUTTON', 'INPUT'].includes(e.target.tagName)
+    ) {
+        return;
+    }
+
+    isDragging = true;
+    popupBox.classList.add('dragging'); 
+    const rect = popupBox.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    popupBox.style.transform = 'none';
+    popupBox.style.left = `${rect.left}px`;
+    popupBox.style.top = `${rect.top}px`;
+
+    document.addEventListener('mousemove', dragMove);
+    document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('mouseleave', stopDrag); 
+
+    e.preventDefault(); 
+};
 
 
-        isDragging = true;
-        popupBox.classList.add('dragging'); // Optional: visual feedback
-
-        // Calculate offset from the element's top-left corner
-        // Need to account for potential CSS transforms
-        const rect = popupBox.getBoundingClientRect();
-        offsetX = e.clientX - rect.left;
-        offsetY = e.clientY - rect.top;
-
-
-        // Remove transform for direct top/left positioning during drag
-        popupBox.style.transform = 'none';
-        // Set initial top/left based on current position
-        popupBox.style.left = `${rect.left}px`;
-        popupBox.style.top = `${rect.top}px`;
-
-
-        // Add listeners to the whole document for move and up events
-        document.addEventListener('mousemove', dragMove);
-        document.addEventListener('mouseup', stopDrag);
-        document.addEventListener('mouseleave', stopDrag); // Stop if mouse leaves window
-
-        e.preventDefault(); // Prevent default drag behavior (like text selection)
-    };
-
-    // Function to handle dragging movement
     const dragMove = (e) => {
         if (!isDragging) return;
 
@@ -395,7 +360,7 @@ html, body {
         let newY = e.clientY - offsetY;
 
         // Optional: Boundary checks (prevent dragging off-screen)
-        const overlayRect = popupOverlay.getBoundingClientRect(); // or document.documentElement.clientWidth/Height
+        const overlayRect = popupOverlay.getBoundingClientRect(); 
         const boxRect = popupBox.getBoundingClientRect();
 
         newX = Math.max(0, Math.min(newX, overlayRect.width - boxRect.width));
@@ -410,18 +375,17 @@ html, body {
     const stopDrag = () => {
         if (isDragging) {
             isDragging = false;
-            popupBox.classList.remove('dragging'); // Optional: remove visual feedback
-            // Remove document-level listeners
+            popupBox.classList.remove('dragging'); 
             document.removeEventListener('mousemove', dragMove);
             document.removeEventListener('mouseup', stopDrag);
             document.removeEventListener('mouseleave', stopDrag);
         }
     };
 
-    // Attach the mousedown listener to the popup box
     popupBox.addEventListener('mousedown', startDrag);
 
-}); // End of DOMContentLoaded
+}); 
+
 </script>
 
 <!-- Popup container -->

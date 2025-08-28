@@ -5,11 +5,11 @@
     },
 
     "popups": {
-        "1": "<div><p>Escorial ZI2 reads <em>feliça</em>, which is here corrected with <em>Seliça</em>, following Long's edition: \"Deues mig iour en partida comarca con la Segona Eminia et con Seliça [...]\" (Long 1934, p. 67). The correction reflects, branch α: \"Deuers midi a en partie confint auec la segonde armeniee et auec sil[stain]\" (ÖNB 2623, f. 12r)..</p></div>",
-        "2": "<div><p>Escorial ZI2 reads otra, omitting tierra: “car antiguament el emperador de Greçia tomara aquella otra assi como la sua propria” (Escorial ZI2, f. 7v). This omission introduces an error, which we correct here following Long, whose edition reads: “car antiguament el emperador de Greçia tomara aquella tierra assi como la sua propria” (Long 1934, p. 67). Branch alpha supports Long’s reading: “Car encienement l’empereor de gresce tenoit cele terre comme suee propre” (ÖNB 2623, f. 12v). The error may also have arisen from a misinterpretation of the abbreviation for tierra, or from its absence.</p></div>",
-        "3": "<div><p>Escorial ZI2 (f. 7v) reads <em>goruernaua</em></p></div>",
-        "4": "<div><p>Escorial ZI2 (f. 7v) reads <em>otra</em></p></div>",
+        "1": "<div><p>Escorial ZI2 reads <em>feliça</em>, which is here corrected with <em>Seliça</em>, following Long's edition: \"Deues mig iour en partida comarca con la Segona Eminia et con Seliça [...]\" (Long 1934, p. 67). The correction reflects, branch α: \"Deuers midi a en partie confint auec la segonde armeniee et auec sil[stain]\" (ÖNB 2623, f. 12r).</p></div>",
+        "2": "<div><p>Escorial ZI2 reads otra, omitting tierra: “car antiguament el emperador de Greçia tomara aquella otra assi como la sua propria” (Escorial ZI2, f. 7v). This omission introduces an error, which we correct here following Long, whose edition reads: “car antiguament el emperador de Greçia tomara aquella tierra assi como la sua propria” (Long 1934, p. 67). Branch α supports Long’s reading: “Car encienement l’empereor de gresce tenoit cele terre comme suee propre” (ÖNB 2623, f. 12v). The error may also have arisen from a misinterpretation of the abbreviation for tierra, or from its absence.</p></div>",
+        "3": "<div><p>Escorial ZI2 (f. 7v) reads <em>goruernaua</em>.</p></div>",
+        "4": "<div><p>Escorial ZI2 (f. 7v) reads <em>otra</em>.</p></div>",
         "5": "<div><p>\"car quant les <strong>turs</strong>&nbsp; pristrent la seignorie de turquie il ne poerent prendre la cite de trapesunde\" <a target=\"\" rel=\"\">(\u00d6NB 2623, f. 13r)</a>. Long (1934, p. 68) corrects following branch α.</p></div>",
-        "6": "<div><p><a target=\"\" rel=\"\">[7]</a> \"Les autres sunt pastors qui demorent au chans&nbsp; en ce temps d'iuer et d'este paissant leur bestes et sunt&nbsp; bones gent d'armes a pie et a cheval\" (\u00d6NB 2623, f. 13r)</p></div>"
+        "6": "<div><p>\"Les autres sunt pastors qui demorent au chans&nbsp; en ce temps d'iuer et d'este paissant leur bestes et sunt&nbsp; bones gent d'armes a pie et a cheval\" (\u00d6NB 2623, f. 13r).</p></div>"
     }
 }
